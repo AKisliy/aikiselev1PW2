@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		A52A83C72AC0129400328A2B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52A83C62AC0129400328A2B /* AppDelegate.swift */; };
 		A52A83C92AC0129400328A2B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52A83C82AC0129400328A2B /* SceneDelegate.swift */; };
-		A52A83CB2AC0129400328A2B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52A83CA2AC0129400328A2B /* ViewController.swift */; };
-		A52A83CE2AC0129400328A2B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A52A83CC2AC0129400328A2B /* Main.storyboard */; };
+		A52A83CB2AC0129400328A2B /* WishMakerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52A83CA2AC0129400328A2B /* WishMakerViewController.swift */; };
 		A52A83D02AC0129600328A2B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A52A83CF2AC0129600328A2B /* Assets.xcassets */; };
 		A52A83D32AC0129600328A2B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A52A83D12AC0129600328A2B /* LaunchScreen.storyboard */; };
+		A52A83DB2AC021ED00328A2B /* CustomSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52A83DA2AC021ED00328A2B /* CustomSlider.swift */; };
+		A52A83F72ACD2ED900328A2B /* UIView+Pin.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52A83F62ACD2ED900328A2B /* UIView+Pin.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A52A83C32AC0129400328A2B /* aikiselev1PW2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = aikiselev1PW2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A52A83C62AC0129400328A2B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A52A83C82AC0129400328A2B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A52A83CA2AC0129400328A2B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		A52A83CD2AC0129400328A2B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A52A83CA2AC0129400328A2B /* WishMakerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishMakerViewController.swift; sourceTree = "<group>"; };
 		A52A83CF2AC0129600328A2B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A52A83D22AC0129600328A2B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A52A83D42AC0129600328A2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A52A83DA2AC021ED00328A2B /* CustomSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSlider.swift; sourceTree = "<group>"; };
+		A52A83F62ACD2ED900328A2B /* UIView+Pin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Pin.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,11 +60,12 @@
 			children = (
 				A52A83C62AC0129400328A2B /* AppDelegate.swift */,
 				A52A83C82AC0129400328A2B /* SceneDelegate.swift */,
-				A52A83CA2AC0129400328A2B /* ViewController.swift */,
-				A52A83CC2AC0129400328A2B /* Main.storyboard */,
+				A52A83CA2AC0129400328A2B /* WishMakerViewController.swift */,
 				A52A83CF2AC0129600328A2B /* Assets.xcassets */,
 				A52A83D12AC0129600328A2B /* LaunchScreen.storyboard */,
 				A52A83D42AC0129600328A2B /* Info.plist */,
+				A52A83DA2AC021ED00328A2B /* CustomSlider.swift */,
+				A52A83F62ACD2ED900328A2B /* UIView+Pin.swift */,
 			);
 			path = aikiselev1PW2;
 			sourceTree = "<group>";
@@ -127,7 +130,6 @@
 			files = (
 				A52A83D32AC0129600328A2B /* LaunchScreen.storyboard in Resources */,
 				A52A83D02AC0129600328A2B /* Assets.xcassets in Resources */,
-				A52A83CE2AC0129400328A2B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +140,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A52A83CB2AC0129400328A2B /* ViewController.swift in Sources */,
+				A52A83F72ACD2ED900328A2B /* UIView+Pin.swift in Sources */,
+				A52A83CB2AC0129400328A2B /* WishMakerViewController.swift in Sources */,
 				A52A83C72AC0129400328A2B /* AppDelegate.swift in Sources */,
 				A52A83C92AC0129400328A2B /* SceneDelegate.swift in Sources */,
+				A52A83DB2AC021ED00328A2B /* CustomSlider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		A52A83CC2AC0129400328A2B /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A52A83CD2AC0129400328A2B /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		A52A83D12AC0129600328A2B /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -291,9 +287,9 @@
 				INFOPLIST_FILE = aikiselev1PW2/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -318,9 +314,9 @@
 				INFOPLIST_FILE = aikiselev1PW2/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
