@@ -265,13 +265,3 @@ extension UIView{
         return result
     }
 }
-
-extension UIColor {
-    var coreImageColor: CIColor {
-        return CIColor(color: self)
-    }
-    var components: (red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat) {
-        let color = coreImageColor
-        return (color.red, color.green, color.blue, color.alpha)
-    }
-}
