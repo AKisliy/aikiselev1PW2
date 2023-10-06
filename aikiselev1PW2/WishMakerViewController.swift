@@ -22,6 +22,8 @@ class WishMakerViewController: UIViewController {
         static let titleTop: CGFloat = 30
         static let titleText: String = "WishMaker"
         
+        static let colorAlpha: Double = 1.0
+        
         static let descriptionFont: Double = 20
         static let descriptionLeading: CGFloat = 30
         static let descriptionTop: CGFloat = 20
@@ -110,17 +112,17 @@ class WishMakerViewController: UIViewController {
         sliderStack.pinBottom(to: view, Constants.stackBottom)
         
         sliderRed.valueChanged = { [weak self] value in
-            self?.view.backgroundColor = UIColor(red: CGFloat(sliderRed.slider.value), green: self!.currentGreen, blue: self!.currentBlue, alpha: 1.0)
+            self?.view.backgroundColor = UIColor(red: CGFloat(sliderRed.slider.value), green: self!.currentGreen, blue: self!.currentBlue, alpha: Constants.colorAlpha)
             self?.currentRed = CGFloat(sliderRed.slider.value)
         }
         
         sliderBlue.valueChanged = { [weak self] value in
-            self?.view.backgroundColor = UIColor(red: self!.currentRed, green: self!.currentGreen, blue: CGFloat(sliderBlue.slider.value), alpha: 1.0)
+            self?.view.backgroundColor = UIColor(red: self!.currentRed, green: self!.currentGreen, blue: CGFloat(sliderBlue.slider.value), alpha: Constants.colorAlpha)
             self?.currentBlue = CGFloat(sliderBlue.slider.value)
         }
         
         sliderGreen.valueChanged = { [weak self] value in
-            self?.view.backgroundColor = UIColor(red: self!.currentRed, green: CGFloat(sliderGreen.slider.value), blue: self!.currentBlue, alpha: 1.0)
+            self?.view.backgroundColor = UIColor(red: self!.currentRed, green: CGFloat(sliderGreen.slider.value), blue: self!.currentBlue, alpha: Constants.colorAlpha)
             self?.currentGreen = CGFloat(sliderGreen.slider.value)
         }
     }
