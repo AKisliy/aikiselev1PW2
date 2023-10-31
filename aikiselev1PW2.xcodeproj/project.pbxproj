@@ -15,6 +15,7 @@
 		A52A83DB2AC021ED00328A2B /* CustomSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52A83DA2AC021ED00328A2B /* CustomSlider.swift */; };
 		A52A83F72ACD2ED900328A2B /* UIView+Pin.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52A83F62ACD2ED900328A2B /* UIView+Pin.swift */; };
 		A52A83F92AD04A7400328A2B /* UIColor+CoreImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52A83F82AD04A7400328A2B /* UIColor+CoreImage.swift */; };
+		A54C6E242AF0D2E200D4FAEE /* WishStoringViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54C6E232AF0D2E200D4FAEE /* WishStoringViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		A52A83DA2AC021ED00328A2B /* CustomSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSlider.swift; sourceTree = "<group>"; };
 		A52A83F62ACD2ED900328A2B /* UIView+Pin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Pin.swift"; sourceTree = "<group>"; };
 		A52A83F82AD04A7400328A2B /* UIColor+CoreImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+CoreImage.swift"; sourceTree = "<group>"; };
+		A54C6E232AF0D2E200D4FAEE /* WishStoringViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishStoringViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				A52A83C62AC0129400328A2B /* AppDelegate.swift */,
 				A52A83C82AC0129400328A2B /* SceneDelegate.swift */,
 				A52A83CA2AC0129400328A2B /* WishMakerViewController.swift */,
+				A54C6E232AF0D2E200D4FAEE /* WishStoringViewController.swift */,
 				A52A83CF2AC0129600328A2B /* Assets.xcassets */,
 				A52A83D12AC0129600328A2B /* LaunchScreen.storyboard */,
 				A52A83D42AC0129600328A2B /* Info.plist */,
@@ -148,6 +151,7 @@
 				A52A83F92AD04A7400328A2B /* UIColor+CoreImage.swift in Sources */,
 				A52A83C72AC0129400328A2B /* AppDelegate.swift in Sources */,
 				A52A83C92AC0129400328A2B /* SceneDelegate.swift in Sources */,
+				A54C6E242AF0D2E200D4FAEE /* WishStoringViewController.swift in Sources */,
 				A52A83DB2AC021ED00328A2B /* CustomSlider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
