@@ -191,7 +191,29 @@ extension UIView{
         pinDimension(mode: mode, widthAnchor, constant: const)
     }
     
-    
+    // MARK: - Pin utilities
+        func pinHorizontal(
+            to otherView: UIView,
+            _ const: Double = 0,
+            mode: ConstraintMode = .equal
+        ) {
+            pinLeft(to: otherView, const, mode)
+            pinRight(to: otherView, const, mode)
+        }
+
+        func pinVertical(
+            to otherView: UIView,
+            _ const: Double = 0,
+            mode: ConstraintMode = .equal
+        ) {
+            pinTop(to: otherView, const, mode)
+            pinBottom(to: otherView, const, mode)
+        }
+
+        func pin(to otherView: UIView, _ const: Double = 0) {
+            pinVertical(to: otherView, const)
+            pinHorizontal(to: otherView, const)
+        }
     
     // MARK: - Private methods
     @discardableResult

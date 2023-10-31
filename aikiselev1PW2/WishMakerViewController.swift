@@ -31,10 +31,17 @@ class WishMakerViewController: UIViewController {
         
         static let stackRadius: CGFloat = 20
         static let stackLeading: CGFloat = 20
-        static let stackBottom: CGFloat = 50
+        static let stackBottom: CGFloat = 30
         
         static let buttonText: String = "Hide"
         static let buttonBottom: CGFloat = 20
+        static let buttonHeight: CGFloat = 30
+        
+        static let addWishButtonText: String = "My wishes"
+        static let addWishButtonBottom: CGFloat = 20
+        static let addWishButtonHeight: CGFloat = 50
+        static let addWishButtonRaduius: CGFloat = 15
+        static let addWishButtonSide: CGFloat = 10
         
     }
     
@@ -42,6 +49,7 @@ class WishMakerViewController: UIViewController {
     private let button: UIButton = UIButton()
     private let titleView = UILabel()
     private let desciprionView = UILabel()
+    private let addWishButton: UIButton = UIButton(type: .system)
     private var currentRed:CGFloat = 0
     private var currentGreen:CGFloat = 0
     private var currentBlue:CGFloat = 0
@@ -63,6 +71,7 @@ class WishMakerViewController: UIViewController {
         currentGreen = coreColor!.green
         configureTitle()
         configureDescription()
+        configureAddWishButton()
         configureSliders()
         configureButton()
     }
@@ -109,7 +118,7 @@ class WishMakerViewController: UIViewController {
         
         sliderStack.pinXCenter(to: view)
         sliderStack.pinLeft(to: view, Constants.stackLeading)
-        sliderStack.pinBottom(to: view, Constants.stackBottom)
+        sliderStack.pinBottom(to: addWishButton.topAnchor, Constants.stackBottom)
         
         sliderRed.valueChanged = { [weak self] value in
             self?.view.backgroundColor = UIColor(red: CGFloat(sliderRed.slider.value), green: self!.currentGreen, blue: self!.currentBlue, alpha: Constants.colorAlpha)
@@ -140,6 +149,26 @@ class WishMakerViewController: UIViewController {
         button.pinBottom(to: sliderStack.topAnchor, Constants.buttonBottom)
         button.pinLeft(to: view.leadingAnchor, Constants.stackLeading)
         button.pinRight(to: view.centerXAnchor)
+        button.setHeight(value: Constants.buttonHeight)
+    }
+    
+    private func configureAddWishButton(){
+        view.addSubview(addWishButton)
+        addWishButton.setHeight(value: Constants.addWishButtonHeight)
+        addWishButton.pinBottom(to: view, Constants.addWishButtonBottom)
+        addWishButton.pinHorizontal(to: view, Constants.stackLeading)
+        
+        addWishButton.backgroundColor = .white
+        addWishButton.setTitleColor(.systemPink, for: .normal)
+        addWishButton.setTitle(Constants.addWishButtonText, for: .normal)
+        
+        addWishButton.layer.cornerRadius = Constants.addWishButtonRaduius
+        addWishButton.addTarget(self, action: #selector(addWishButtonPressed), for: .touchUpInside)
+    }
+    
+    @objc
+    private func addWishButtonPressed(){
+        
     }
 }
 
