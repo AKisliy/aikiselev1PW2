@@ -16,6 +16,7 @@
 		A52A83F72ACD2ED900328A2B /* UIView+Pin.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52A83F62ACD2ED900328A2B /* UIView+Pin.swift */; };
 		A52A83F92AD04A7400328A2B /* UIColor+CoreImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52A83F82AD04A7400328A2B /* UIColor+CoreImage.swift */; };
 		A54C6E242AF0D2E200D4FAEE /* WishStoringViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54C6E232AF0D2E200D4FAEE /* WishStoringViewController.swift */; };
+		A54C6E262AF0E4BA00D4FAEE /* WrittenWishCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54C6E252AF0E4BA00D4FAEE /* WrittenWishCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		A52A83F62ACD2ED900328A2B /* UIView+Pin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Pin.swift"; sourceTree = "<group>"; };
 		A52A83F82AD04A7400328A2B /* UIColor+CoreImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+CoreImage.swift"; sourceTree = "<group>"; };
 		A54C6E232AF0D2E200D4FAEE /* WishStoringViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishStoringViewController.swift; sourceTree = "<group>"; };
+		A54C6E252AF0E4BA00D4FAEE /* WrittenWishCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WrittenWishCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				A52A83C82AC0129400328A2B /* SceneDelegate.swift */,
 				A52A83CA2AC0129400328A2B /* WishMakerViewController.swift */,
 				A54C6E232AF0D2E200D4FAEE /* WishStoringViewController.swift */,
+				A54C6E252AF0E4BA00D4FAEE /* WrittenWishCell.swift */,
 				A52A83CF2AC0129600328A2B /* Assets.xcassets */,
 				A52A83D12AC0129600328A2B /* LaunchScreen.storyboard */,
 				A52A83D42AC0129600328A2B /* Info.plist */,
@@ -146,6 +149,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A54C6E262AF0E4BA00D4FAEE /* WrittenWishCell.swift in Sources */,
 				A52A83F72ACD2ED900328A2B /* UIView+Pin.swift in Sources */,
 				A52A83CB2AC0129400328A2B /* WishMakerViewController.swift in Sources */,
 				A52A83F92AD04A7400328A2B /* UIColor+CoreImage.swift in Sources */,
