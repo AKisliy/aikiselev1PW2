@@ -20,6 +20,7 @@ final class AddWishCell:UITableViewCell{
         static let stackSpacing: CGFloat = 8
         static let stackPin: CGFloat = 15
     }
+    
     static let reuseId: String = "AddWishCell"
     private var textView = UITextView()
     private var addWishButton = UIButton()

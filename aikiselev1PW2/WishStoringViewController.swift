@@ -12,14 +12,17 @@ final class WishStoringViewController: UIViewController{
         static let tableCornerRadius: CGFloat = 15
         static let tableOffset: CGFloat = 10
         static let numberOfSections: Int = 2
+        static let wishesKey = "WishesKey"
     }
     
     private let table: UITableView = UITableView(frame: .zero)
-    private var wishArray: [String] = ["I wish to add cells to the table"]
+    private var wishArray: [String]!
+    private let defaults = UserDefaults.standard
     
     override func viewDidLoad() {
         view.backgroundColor = .blue
         configureTable()
+        wishArray = (defaults.array(forKey: Constants.wishesKey) as? [String]) ?? []
     }
     
     private func configureTable(){
@@ -38,6 +41,7 @@ final class WishStoringViewController: UIViewController{
     func newWishAdded(wish: String) {
         wishArray.append(wish)
         table.reloadData()
+        defaults.set(wishArray, forKey: Constants.wishesKey)
     }
 }
 
