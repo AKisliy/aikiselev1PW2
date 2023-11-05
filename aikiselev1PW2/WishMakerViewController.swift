@@ -60,7 +60,7 @@ class WishMakerViewController: UIViewController {
     }
     
     @objc func hideSlider(){
-        sliderStack.isHidden = !sliderStack.isHidden
+        sliderStack.isHidden.toggle()
     }
     
     private func configureUI(){
