@@ -43,6 +43,13 @@ final class WishStoringViewController: UIViewController{
         table.reloadData()
         defaults.set(wishArray, forKey: Constants.wishesKey)
     }
+    
+    
+    func deleteWish(indexPath: IndexPath) {
+        wishArray.remove(at: indexPath.row)
+        table.reloadData()
+        defaults.set(wishArray, forKey: Constants.wishesKey)
+    }
 }
 
 // MARK: - UITableViewDataSource
@@ -58,7 +65,8 @@ extension WishStoringViewController: UITableViewDataSource {
         default:
             let wish = wishArray[indexPath.row]
             if let wishCell = table.dequeueReusableCell(withIdentifier: WrittenWishCell.reuseId, for: indexPath) as? WrittenWishCell{
-                wishCell.configure(with: wish)
+                wishCell.deleteFunc = deleteWish
+                wishCell.configure(with: wish, indexPath: indexPath)
                 return wishCell
             }
         }

@@ -10,6 +10,8 @@ import UIKit
 class WishMakerViewController: UIViewController {
     
     enum Constants {
+        static let spacing: CGFloat = 10
+        
         static let sliderMin: Double = 0
         static let sliderMax: Double = 1
         
@@ -33,23 +35,27 @@ class WishMakerViewController: UIViewController {
         static let stackLeading: CGFloat = 20
         static let stackBottom: CGFloat = 30
         
-        static let buttonText: String = "Hide"
-        static let buttonBottom: CGFloat = 20
-        static let buttonHeight: CGFloat = 30
+        static let hideButtonText: String = "Hide"
+        static let hideButtonBottom: CGFloat = 20
+        static let hideButtonHeight: CGFloat = 30
         
         static let addWishButtonText: String = "My wishes"
-        static let addWishButtonBottom: CGFloat = 20
         static let addWishButtonHeight: CGFloat = 50
         static let addWishButtonRaduius: CGFloat = 15
-        static let addWishButtonSide: CGFloat = 10
+        
+        static let scheduleWishesButtonText: String = "Schedule wishes"
+        static let scheduleWishesButtonRadius: CGFloat = 15
+        static let scheduleWishedButtonHeight: CGFloat = 50
         
     }
     
     private let sliderStack: UIStackView = UIStackView()
-    private let button: UIButton = UIButton()
+    private let hideButton: UIButton = UIButton()
     private let titleView = UILabel()
-    private let desciprionView = UILabel()
+    private let descriptionView = UILabel()
     private let addWishButton: UIButton = UIButton(type: .system)
+    private let scheduleWishesButton: UIButton = UIButton(type: .system)
+    private let actionStack: UIStackView = UIStackView()
     private var currentRed:CGFloat = 0
     private var currentGreen:CGFloat = 0
     private var currentBlue:CGFloat = 0
@@ -72,8 +78,10 @@ class WishMakerViewController: UIViewController {
         configureTitle()
         configureDescription()
         configureAddWishButton()
+        configureScheduleWishesButton()
+        configureActionStack()
         configureSliders()
-        configureButton()
+        configureHideButton()
     }
     
     private func configureTitle(){
@@ -88,15 +96,15 @@ class WishMakerViewController: UIViewController {
     }
     
     private func configureDescription(){
-        desciprionView.translatesAutoresizingMaskIntoConstraints = false
-        desciprionView.text = Constants.descriptionText
-        desciprionView.adjustsFontSizeToFitWidth = true
-        desciprionView.font = UIFont.systemFont(ofSize: Constants.descriptionFont)
+        descriptionView.translatesAutoresizingMaskIntoConstraints = false
+        descriptionView.text = Constants.descriptionText
+        descriptionView.adjustsFontSizeToFitWidth = true
+        descriptionView.font = UIFont.systemFont(ofSize: Constants.descriptionFont)
         
-        view.addSubview(desciprionView)
-        desciprionView.pinXCenter(to: view)
-        desciprionView.pinLeft(to: view, Constants.descriptionLeading)
-        desciprionView.pinTop(to: titleView.bottomAnchor, Constants.descriptionTop)
+        view.addSubview(descriptionView)
+        descriptionView.pinXCenter(to: view)
+        descriptionView.pinLeft(to: view, Constants.descriptionLeading)
+        descriptionView.pinTop(to: titleView.bottomAnchor, Constants.descriptionTop)
     }
     
     private func configureSliders(){
@@ -136,28 +144,26 @@ class WishMakerViewController: UIViewController {
         }
     }
     
-    private func configureButton(){
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle(Constants.buttonText, for: .normal)
-        button.backgroundColor = .blue
-        button.setTitleColor(.black, for: .normal)
-        button.addTarget(self, action: #selector(hideSlider), for: .touchDown)
-        button.layer.cornerRadius = Constants.stackRadius
+    private func configureHideButton(){
+        hideButton.translatesAutoresizingMaskIntoConstraints = false
+        hideButton.setTitle(Constants.hideButtonText, for: .normal)
+        hideButton.backgroundColor = .blue
+        hideButton.setTitleColor(.black, for: .normal)
+        hideButton.addTarget(self, action: #selector(hideSlider), for: .touchDown)
+        hideButton.layer.cornerRadius = Constants.stackRadius
 
-        view.addSubview(button)
+        view.addSubview(hideButton)
         
-        button.pinBottom(to: sliderStack.topAnchor, Constants.buttonBottom)
-        button.pinLeft(to: view.leadingAnchor, Constants.stackLeading)
-        button.pinRight(to: view.centerXAnchor)
-        button.setHeight(value: Constants.buttonHeight)
+        hideButton.pinBottom(to: sliderStack.topAnchor, Constants.hideButtonBottom)
+        hideButton.pinLeft(to: view.leadingAnchor, Constants.stackLeading)
+        hideButton.pinRight(to: view.centerXAnchor)
+        hideButton.setHeight(value: Constants.hideButtonHeight)
     }
     
     private func configureAddWishButton(){
         view.addSubview(addWishButton)
         addWishButton.setHeight(value: Constants.addWishButtonHeight)
-        addWishButton.pinBottom(to: view, Constants.addWishButtonBottom)
-        addWishButton.pinHorizontal(to: view, Constants.stackLeading)
-        
+
         addWishButton.backgroundColor = .white
         addWishButton.setTitleColor(.systemPink, for: .normal)
         addWishButton.setTitle(Constants.addWishButtonText, for: .normal)
@@ -166,9 +172,40 @@ class WishMakerViewController: UIViewController {
         addWishButton.addTarget(self, action: #selector(addWishButtonPressed), for: .touchUpInside)
     }
     
+    private func configureScheduleWishesButton(){
+        view.addSubview(scheduleWishesButton)
+        scheduleWishesButton.setHeight(value: Constants.scheduleWishedButtonHeight)
+        
+        scheduleWishesButton.backgroundColor = .white
+        scheduleWishesButton.setTitleColor(.systemPink, for: .normal)
+        scheduleWishesButton.setTitle(Constants.scheduleWishesButtonText, for: .normal)
+        
+        scheduleWishesButton.layer.cornerRadius = Constants.scheduleWishesButtonRadius
+        scheduleWishesButton.addTarget(self, action: #selector(scheduleWishesButtonPressed), for: .touchUpInside)
+    }
+    
+    private func configureActionStack(){
+        actionStack.axis = .vertical
+        view.addSubview(actionStack)
+        actionStack.spacing = Constants.spacing
+        
+        for button in [addWishButton, scheduleWishesButton]{
+            actionStack.addArrangedSubview(button)
+        }
+    
+        
+        actionStack.pinBottom(to: view, Constants.stackBottom)
+        actionStack.pinHorizontal(to: view, Constants.stackLeading)
+    }
+    
     @objc
     private func addWishButtonPressed(){
         present(WishStoringViewController(), animated: true)
+    }
+    
+    @objc
+    private func scheduleWishesButtonPressed(){
+        
     }
 }
 
