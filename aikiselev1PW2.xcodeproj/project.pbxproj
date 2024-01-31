@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A515C0D92B6A787100A93954 /* WishCalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A515C0D82B6A787100A93954 /* WishCalendarViewController.swift */; };
 		A52A83C72AC0129400328A2B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52A83C62AC0129400328A2B /* AppDelegate.swift */; };
 		A52A83C92AC0129400328A2B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52A83C82AC0129400328A2B /* SceneDelegate.swift */; };
 		A52A83CB2AC0129400328A2B /* WishMakerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52A83CA2AC0129400328A2B /* WishMakerViewController.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A515C0D82B6A787100A93954 /* WishCalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishCalendarViewController.swift; sourceTree = "<group>"; };
 		A52A83C32AC0129400328A2B /* aikiselev1PW2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = aikiselev1PW2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A52A83C62AC0129400328A2B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A52A83C82AC0129400328A2B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 				A52A83F62ACD2ED900328A2B /* UIView+Pin.swift */,
 				A52A83F82AD04A7400328A2B /* UIColor+CoreImage.swift */,
 				A54C6E272AF776B200D4FAEE /* AddWishCell.swift */,
+				A515C0D82B6A787100A93954 /* WishCalendarViewController.swift */,
 			);
 			path = aikiselev1PW2;
 			sourceTree = "<group>";
@@ -154,6 +157,7 @@
 			files = (
 				A54C6E262AF0E4BA00D4FAEE /* WrittenWishCell.swift in Sources */,
 				A52A83F72ACD2ED900328A2B /* UIView+Pin.swift in Sources */,
+				A515C0D92B6A787100A93954 /* WishCalendarViewController.swift in Sources */,
 				A52A83CB2AC0129400328A2B /* WishMakerViewController.swift in Sources */,
 				A52A83F92AD04A7400328A2B /* UIColor+CoreImage.swift in Sources */,
 				A52A83C72AC0129400328A2B /* AppDelegate.swift in Sources */,
