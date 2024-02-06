@@ -82,7 +82,7 @@ class WishCalendarViewController: UIViewController{
         view.addSubview(addButton)
         
         addButton.setBackgroundImage(UIImage(systemName: "plus.circle"), for: UIControl.State.normal)
-        addButton.pinBottom(to: view, 25)
+        addButton.pinBottom(to: view.safeAreaLayoutGuide.bottomAnchor, 25)
         addButton.pinXCenter(to: view)
         
         addButton.translatesAutoresizingMaskIntoConstraints = false
