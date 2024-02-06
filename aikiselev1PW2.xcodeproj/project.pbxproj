@@ -8,9 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		A515C0D92B6A787100A93954 /* WishCalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A515C0D82B6A787100A93954 /* WishCalendarViewController.swift */; };
-		A515C0DB2B6A7CB000A93954 /* WishCalendarCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A515C0DA2B6A7CB000A93954 /* WishCalendarCollection.swift */; };
 		A515C0DD2B6A82F900A93954 /* WishEventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A515C0DC2B6A82F900A93954 /* WishEventCell.swift */; };
 		A515C0DF2B6A845E00A93954 /* WishEventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A515C0DE2B6A845E00A93954 /* WishEventModel.swift */; };
+		A515C0ED2B70B00600A93954 /* AddEventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A515C0EC2B70B00600A93954 /* AddEventCell.swift */; };
+		A515C0EF2B70D7E600A93954 /* WishEventCreationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A515C0EE2B70D7E600A93954 /* WishEventCreationView.swift */; };
+		A515C0F22B72345500A93954 /* EventModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A515C0F02B72345500A93954 /* EventModel.xcdatamodeld */; };
 		A52A83C72AC0129400328A2B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52A83C62AC0129400328A2B /* AppDelegate.swift */; };
 		A52A83C92AC0129400328A2B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52A83C82AC0129400328A2B /* SceneDelegate.swift */; };
 		A52A83CB2AC0129400328A2B /* WishMakerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52A83CA2AC0129400328A2B /* WishMakerViewController.swift */; };
@@ -26,9 +28,11 @@
 
 /* Begin PBXFileReference section */
 		A515C0D82B6A787100A93954 /* WishCalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishCalendarViewController.swift; sourceTree = "<group>"; };
-		A515C0DA2B6A7CB000A93954 /* WishCalendarCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishCalendarCollection.swift; sourceTree = "<group>"; };
 		A515C0DC2B6A82F900A93954 /* WishEventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishEventCell.swift; sourceTree = "<group>"; };
 		A515C0DE2B6A845E00A93954 /* WishEventModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishEventModel.swift; sourceTree = "<group>"; };
+		A515C0EC2B70B00600A93954 /* AddEventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventCell.swift; sourceTree = "<group>"; };
+		A515C0EE2B70D7E600A93954 /* WishEventCreationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishEventCreationView.swift; sourceTree = "<group>"; };
+		A515C0F12B72345500A93954 /* EventModel.xcdatamodel */ = {isa = PBXFileReference; explicitFileType = wrapper.xcdatamodel; path = EventModel.xcdatamodel; sourceTree = "<group>"; };
 		A52A83C32AC0129400328A2B /* aikiselev1PW2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = aikiselev1PW2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A52A83C62AC0129400328A2B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A52A83C82AC0129400328A2B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -55,6 +59,46 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A515C0E62B6F907500A93954 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A515C0DE2B6A845E00A93954 /* WishEventModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A515C0E72B6F907D00A93954 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A515C0DC2B6A82F900A93954 /* WishEventCell.swift */,
+				A52A83DA2AC021ED00328A2B /* CustomSlider.swift */,
+				A54C6E252AF0E4BA00D4FAEE /* WrittenWishCell.swift */,
+				A54C6E272AF776B200D4FAEE /* AddWishCell.swift */,
+				A515C0EC2B70B00600A93954 /* AddEventCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A515C0E82B6F908500A93954 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A54C6E232AF0D2E200D4FAEE /* WishStoringViewController.swift */,
+				A52A83CA2AC0129400328A2B /* WishMakerViewController.swift */,
+				A515C0D82B6A787100A93954 /* WishCalendarViewController.swift */,
+				A515C0EE2B70D7E600A93954 /* WishEventCreationView.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		A515C0E92B6F90C800A93954 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A52A83F62ACD2ED900328A2B /* UIView+Pin.swift */,
+				A52A83F82AD04A7400328A2B /* UIColor+CoreImage.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		A52A83BA2AC0129400328A2B = {
 			isa = PBXGroup;
 			children = (
@@ -74,22 +118,16 @@
 		A52A83C52AC0129400328A2B /* aikiselev1PW2 */ = {
 			isa = PBXGroup;
 			children = (
+				A515C0F02B72345500A93954 /* EventModel.xcdatamodeld */,
+				A515C0E62B6F907500A93954 /* Model */,
+				A515C0E72B6F907D00A93954 /* View */,
+				A515C0E82B6F908500A93954 /* Controller */,
+				A515C0E92B6F90C800A93954 /* Extensions */,
 				A52A83C62AC0129400328A2B /* AppDelegate.swift */,
 				A52A83C82AC0129400328A2B /* SceneDelegate.swift */,
-				A52A83CA2AC0129400328A2B /* WishMakerViewController.swift */,
-				A54C6E232AF0D2E200D4FAEE /* WishStoringViewController.swift */,
-				A54C6E252AF0E4BA00D4FAEE /* WrittenWishCell.swift */,
 				A52A83CF2AC0129600328A2B /* Assets.xcassets */,
 				A52A83D12AC0129600328A2B /* LaunchScreen.storyboard */,
 				A52A83D42AC0129600328A2B /* Info.plist */,
-				A52A83DA2AC021ED00328A2B /* CustomSlider.swift */,
-				A52A83F62ACD2ED900328A2B /* UIView+Pin.swift */,
-				A52A83F82AD04A7400328A2B /* UIColor+CoreImage.swift */,
-				A54C6E272AF776B200D4FAEE /* AddWishCell.swift */,
-				A515C0D82B6A787100A93954 /* WishCalendarViewController.swift */,
-				A515C0DA2B6A7CB000A93954 /* WishCalendarCollection.swift */,
-				A515C0DC2B6A82F900A93954 /* WishEventCell.swift */,
-				A515C0DE2B6A845E00A93954 /* WishEventModel.swift */,
 			);
 			path = aikiselev1PW2;
 			sourceTree = "<group>";
@@ -165,16 +203,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				A54C6E262AF0E4BA00D4FAEE /* WrittenWishCell.swift in Sources */,
+				A515C0F22B72345500A93954 /* EventModel.xcdatamodeld in Sources */,
 				A515C0DF2B6A845E00A93954 /* WishEventModel.swift in Sources */,
 				A52A83F72ACD2ED900328A2B /* UIView+Pin.swift in Sources */,
 				A515C0D92B6A787100A93954 /* WishCalendarViewController.swift in Sources */,
+				A515C0EF2B70D7E600A93954 /* WishEventCreationView.swift in Sources */,
 				A52A83CB2AC0129400328A2B /* WishMakerViewController.swift in Sources */,
 				A52A83F92AD04A7400328A2B /* UIColor+CoreImage.swift in Sources */,
 				A52A83C72AC0129400328A2B /* AppDelegate.swift in Sources */,
+				A515C0ED2B70B00600A93954 /* AddEventCell.swift in Sources */,
 				A52A83C92AC0129400328A2B /* SceneDelegate.swift in Sources */,
 				A54C6E242AF0D2E200D4FAEE /* WishStoringViewController.swift in Sources */,
 				A52A83DB2AC021ED00328A2B /* CustomSlider.swift in Sources */,
-				A515C0DB2B6A7CB000A93954 /* WishCalendarCollection.swift in Sources */,
 				A54C6E282AF776B200D4FAEE /* AddWishCell.swift in Sources */,
 				A515C0DD2B6A82F900A93954 /* WishEventCell.swift in Sources */,
 			);
@@ -384,6 +424,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A515C0F02B72345500A93954 /* EventModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A515C0F12B72345500A93954 /* EventModel.xcdatamodel */,
+			);
+			currentVersion = A515C0F12B72345500A93954 /* EventModel.xcdatamodel */;
+			path = EventModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = A52A83BB2AC0129400328A2B /* Project object */;
 }

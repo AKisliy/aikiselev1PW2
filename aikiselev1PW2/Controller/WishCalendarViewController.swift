@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreData
 
 class WishCalendarViewController: UIViewController{
     
@@ -16,13 +17,31 @@ class WishCalendarViewController: UIViewController{
         
         static let cellHeight: CGFloat = 100
         
-        static let numberOfRows : Int = 10
+        static let eventsKey = "EventsKey"
     }
+    
+    private var events: [NSManagedObject]!
     
     private let collectionView = UICollectionView(
         frame: .zero,
         collectionViewLayout: UICollectionViewFlowLayout()
     )
+    private let addButton: UIButton = UIButton()
+    
+    override func viewWillAppear(_ animated: Bool) {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        
+        let managedContext = appDelegate.persistentContainer.viewContext
+        let fetchRequest: NSFetchRequest<Event> = Event.fetchRequest()
+        
+        do{
+            let fetchedResults = try managedContext.fetch(fetchRequest) as [NSManagedObject]
+            events = fetchedResults
+        }
+        catch let error as NSError{
+            print("Can't fetch: \(error), \(error.userInfo)")
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +50,7 @@ class WishCalendarViewController: UIViewController{
     
     private func configureUI(){
         configureCollection()
+        configureAddButton()
     }
     
     private func configureCollection(){
@@ -56,12 +76,57 @@ class WishCalendarViewController: UIViewController{
         collectionView.pinBottom(to: view.safeAreaLayoutGuide.bottomAnchor)
         collectionView.pinTop(to: view.safeAreaLayoutGuide.topAnchor, Constants.collectionTop)
     }
+    
+    private func configureAddButton(){
+        view.addSubview(addButton)
+        
+        addButton.setBackgroundImage(UIImage(systemName: "plus.circle"), for: UIControl.State.normal)
+        addButton.pinBottom(to: view, 25)
+        addButton.pinXCenter(to: view)
+        
+        addButton.translatesAutoresizingMaskIntoConstraints = false
+        addButton.setWidth(value: 40)
+        addButton.setHeight(value: 40)
+        
+        addButton.addTarget(self, action: #selector(addWishButtonPressed), for: .touchUpInside)
+    }
+    
+    private func addNewEvent(event: WishEventModel){
+        saveEvent(event: event)
+        collectionView.reloadData()
+    }
+    
+    @objc
+    private func addWishButtonPressed(){
+        let eventCreation = WishEventCreationView()
+        eventCreation.addEvent = addNewEvent
+        present(eventCreation, animated: true)
+    }
+    
+    func saveEvent(event: WishEventModel) {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        
+        let managedContext = appDelegate.persistentContainer.viewContext
+        
+        let entity =  NSEntityDescription.entity(forEntityName: "Event", in:managedContext)
+        
+        let eventEntity = NSManagedObject(entity: entity!, insertInto: managedContext)
+        
+        
+        eventEntity.setValue(event.title, forKey: "name")
+        eventEntity.setValue(event.description, forKey: "body")
+        eventEntity.setValue(event.startDate, forKey: "startDate")
+        eventEntity.setValue(event.endDate, forKey: "endDate")
+        
+        appDelegate.saveContext()
+        events.append(eventEntity)
+    }
 }
 
 // MARK: - UICollectionViewDataSource
 extension WishCalendarViewController: UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        Constants.numberOfRows
+        events.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -71,14 +136,18 @@ extension WishCalendarViewController: UICollectionViewDataSource{
             return cell
         }
         
+        let name = events[indexPath.item].value(forKey: "name") as? String
+        let description = events[indexPath.item].value(forKey: "body") as? String
+        let startDate = events[indexPath.item].value(forKey: "startDate") as? Date
+        let endDate = events[indexPath.item].value(forKey: "endDate") as? Date
         wishEventCell.configure(
             with: WishEventModel(
-                title: "Title",
-                description: "Description" ,
-                startDate: "Start date",
-                endDate: "End date")
+                title: name!,
+                description: description!,
+                startDate: startDate!,
+                endDate: endDate!)
         )
-        return cell
+        return wishEventCell
     }
 }
 
