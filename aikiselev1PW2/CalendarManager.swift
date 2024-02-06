@@ -10,7 +10,7 @@ import EventKit
 final class CalendarManager: CalendarManaging{
     private let eventStore: EKEventStore = EKEventStore()
     
-    func create(eventModel: CalendarEventModel) -> Bool {
+    func create(eventModel: WishEventModel) -> Bool {
         var result = false
         let group = DispatchGroup()
         group.enter()
@@ -24,7 +24,7 @@ final class CalendarManager: CalendarManaging{
         return result
     }
     
-    func create(eventModel: CalendarEventModel, completion: ((Bool) -> Void)?){
+    func create(eventModel: WishEventModel, completion: ((Bool) -> Void)?){
         let createEvent: EKEventStoreRequestAccessCompletionHandler = { [weak self] (granted, error) in
             guard granted, error == nil, let self else{
                 completion?(false)
@@ -34,7 +34,7 @@ final class CalendarManager: CalendarManaging{
             let event = EKEvent(eventStore: self.eventStore)
             
             event.title = eventModel.title
-            event.notes = eventModel.note
+            event.notes = eventModel.description
             event.startDate = eventModel.startDate
             event.endDate = eventModel.endDate
             event.calendar = self.eventStore.defaultCalendarForNewEvents

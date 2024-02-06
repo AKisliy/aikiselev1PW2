@@ -13,7 +13,6 @@
 		A515C0ED2B70B00600A93954 /* AddEventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A515C0EC2B70B00600A93954 /* AddEventCell.swift */; };
 		A515C0EF2B70D7E600A93954 /* WishEventCreationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A515C0EE2B70D7E600A93954 /* WishEventCreationView.swift */; };
 		A515C0F22B72345500A93954 /* EventModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A515C0F02B72345500A93954 /* EventModel.xcdatamodeld */; };
-		A515C0F42B72785B00A93954 /* CalendarEventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A515C0F32B72785B00A93954 /* CalendarEventModel.swift */; };
 		A515C0F72B7278D400A93954 /* CalendarManaging.swift in Sources */ = {isa = PBXBuildFile; fileRef = A515C0F62B7278D400A93954 /* CalendarManaging.swift */; };
 		A515C0F92B72796800A93954 /* CalendarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A515C0F82B72796800A93954 /* CalendarManager.swift */; };
 		A52A83C72AC0129400328A2B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52A83C62AC0129400328A2B /* AppDelegate.swift */; };
@@ -36,7 +35,6 @@
 		A515C0EC2B70B00600A93954 /* AddEventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventCell.swift; sourceTree = "<group>"; };
 		A515C0EE2B70D7E600A93954 /* WishEventCreationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishEventCreationView.swift; sourceTree = "<group>"; };
 		A515C0F12B72345500A93954 /* EventModel.xcdatamodel */ = {isa = PBXFileReference; explicitFileType = wrapper.xcdatamodel; path = EventModel.xcdatamodel; sourceTree = "<group>"; };
-		A515C0F32B72785B00A93954 /* CalendarEventModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarEventModel.swift; sourceTree = "<group>"; };
 		A515C0F62B7278D400A93954 /* CalendarManaging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarManaging.swift; sourceTree = "<group>"; };
 		A515C0F82B72796800A93954 /* CalendarManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarManager.swift; sourceTree = "<group>"; };
 		A52A83C32AC0129400328A2B /* aikiselev1PW2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = aikiselev1PW2.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -69,7 +67,6 @@
 			isa = PBXGroup;
 			children = (
 				A515C0DE2B6A845E00A93954 /* WishEventModel.swift */,
-				A515C0F32B72785B00A93954 /* CalendarEventModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -219,7 +216,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A515C0F42B72785B00A93954 /* CalendarEventModel.swift in Sources */,
 				A54C6E262AF0E4BA00D4FAEE /* WrittenWishCell.swift in Sources */,
 				A515C0F22B72345500A93954 /* EventModel.xcdatamodeld in Sources */,
 				A515C0F92B72796800A93954 /* CalendarManager.swift in Sources */,

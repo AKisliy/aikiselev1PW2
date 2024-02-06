@@ -8,5 +8,5 @@
 import EventKit
 
 protocol CalendarManaging{
-    func create(eventModel: CalendarEventModel)-> Bool
+    func create(eventModel: WishEventModel)-> Bool
 }

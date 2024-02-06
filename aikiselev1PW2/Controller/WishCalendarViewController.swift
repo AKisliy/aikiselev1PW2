@@ -27,6 +27,7 @@ class WishCalendarViewController: UIViewController{
         collectionViewLayout: UICollectionViewFlowLayout()
     )
     private let addButton: UIButton = UIButton()
+    private let calendar: CalendarManager = CalendarManager()
     
     override func viewWillAppear(_ animated: Bool) {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -92,6 +93,7 @@ class WishCalendarViewController: UIViewController{
     }
     
     private func addNewEvent(event: WishEventModel){
+        calendar.create(eventModel: event)
         saveEvent(event: event)
         collectionView.reloadData()
     }
