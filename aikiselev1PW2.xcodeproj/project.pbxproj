@@ -13,6 +13,9 @@
 		A515C0ED2B70B00600A93954 /* AddEventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A515C0EC2B70B00600A93954 /* AddEventCell.swift */; };
 		A515C0EF2B70D7E600A93954 /* WishEventCreationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A515C0EE2B70D7E600A93954 /* WishEventCreationView.swift */; };
 		A515C0F22B72345500A93954 /* EventModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A515C0F02B72345500A93954 /* EventModel.xcdatamodeld */; };
+		A515C0F42B72785B00A93954 /* CalendarEventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A515C0F32B72785B00A93954 /* CalendarEventModel.swift */; };
+		A515C0F72B7278D400A93954 /* CalendarManaging.swift in Sources */ = {isa = PBXBuildFile; fileRef = A515C0F62B7278D400A93954 /* CalendarManaging.swift */; };
+		A515C0F92B72796800A93954 /* CalendarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A515C0F82B72796800A93954 /* CalendarManager.swift */; };
 		A52A83C72AC0129400328A2B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52A83C62AC0129400328A2B /* AppDelegate.swift */; };
 		A52A83C92AC0129400328A2B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52A83C82AC0129400328A2B /* SceneDelegate.swift */; };
 		A52A83CB2AC0129400328A2B /* WishMakerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52A83CA2AC0129400328A2B /* WishMakerViewController.swift */; };
@@ -33,6 +36,9 @@
 		A515C0EC2B70B00600A93954 /* AddEventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventCell.swift; sourceTree = "<group>"; };
 		A515C0EE2B70D7E600A93954 /* WishEventCreationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishEventCreationView.swift; sourceTree = "<group>"; };
 		A515C0F12B72345500A93954 /* EventModel.xcdatamodel */ = {isa = PBXFileReference; explicitFileType = wrapper.xcdatamodel; path = EventModel.xcdatamodel; sourceTree = "<group>"; };
+		A515C0F32B72785B00A93954 /* CalendarEventModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarEventModel.swift; sourceTree = "<group>"; };
+		A515C0F62B7278D400A93954 /* CalendarManaging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarManaging.swift; sourceTree = "<group>"; };
+		A515C0F82B72796800A93954 /* CalendarManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarManager.swift; sourceTree = "<group>"; };
 		A52A83C32AC0129400328A2B /* aikiselev1PW2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = aikiselev1PW2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A52A83C62AC0129400328A2B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A52A83C82AC0129400328A2B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				A515C0DE2B6A845E00A93954 /* WishEventModel.swift */,
+				A515C0F32B72785B00A93954 /* CalendarEventModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -99,6 +106,14 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		A515C0F52B7278B200A93954 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				A515C0F62B7278D400A93954 /* CalendarManaging.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		A52A83BA2AC0129400328A2B = {
 			isa = PBXGroup;
 			children = (
@@ -123,7 +138,9 @@
 				A515C0E72B6F907D00A93954 /* View */,
 				A515C0E82B6F908500A93954 /* Controller */,
 				A515C0E92B6F90C800A93954 /* Extensions */,
+				A515C0F52B7278B200A93954 /* Protocols */,
 				A52A83C62AC0129400328A2B /* AppDelegate.swift */,
+				A515C0F82B72796800A93954 /* CalendarManager.swift */,
 				A52A83C82AC0129400328A2B /* SceneDelegate.swift */,
 				A52A83CF2AC0129600328A2B /* Assets.xcassets */,
 				A52A83D12AC0129600328A2B /* LaunchScreen.storyboard */,
@@ -202,8 +219,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A515C0F42B72785B00A93954 /* CalendarEventModel.swift in Sources */,
 				A54C6E262AF0E4BA00D4FAEE /* WrittenWishCell.swift in Sources */,
 				A515C0F22B72345500A93954 /* EventModel.xcdatamodeld in Sources */,
+				A515C0F92B72796800A93954 /* CalendarManager.swift in Sources */,
 				A515C0DF2B6A845E00A93954 /* WishEventModel.swift in Sources */,
 				A52A83F72ACD2ED900328A2B /* UIView+Pin.swift in Sources */,
 				A515C0D92B6A787100A93954 /* WishCalendarViewController.swift in Sources */,
@@ -214,6 +233,7 @@
 				A515C0ED2B70B00600A93954 /* AddEventCell.swift in Sources */,
 				A52A83C92AC0129400328A2B /* SceneDelegate.swift in Sources */,
 				A54C6E242AF0D2E200D4FAEE /* WishStoringViewController.swift in Sources */,
+				A515C0F72B7278D400A93954 /* CalendarManaging.swift in Sources */,
 				A52A83DB2AC021ED00328A2B /* CustomSlider.swift in Sources */,
 				A54C6E282AF776B200D4FAEE /* AddWishCell.swift in Sources */,
 				A515C0DD2B6A82F900A93954 /* WishEventCell.swift in Sources */,
@@ -357,6 +377,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = aikiselev1PW2/Info.plist;
+				INFOPLIST_KEY_NSCalendarsUsageDescription = "Calendar access is crucial";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -384,6 +405,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = aikiselev1PW2/Info.plist;
+				INFOPLIST_KEY_NSCalendarsUsageDescription = "Calendar access is crucial";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
